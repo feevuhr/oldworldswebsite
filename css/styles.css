@@ -1,8 +1,8 @@
 /* General page styling */
 body {
-    background-color: black;
-    color: white;
-    font-family: Arial, sans-serif;
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    font-family: Arial, sans-serif; /* Font style */
     margin: 0;
     padding: 0;
     text-align: center;
@@ -16,10 +16,10 @@ body {
 
 /* Styling for the version text (green color) */
 .version {
-    color: green;
+    color: green; /* Green for version numbers */
 }
 
-/* Styling for the date text */
+/* Styling for the date text (white color, already default) */
 .date {
-    color: white;
+    color: white; /* White for the dates */
 }
