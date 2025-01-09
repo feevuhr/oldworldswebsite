@@ -23,3 +23,34 @@ body {
 .date {
     color: white; /* White for the dates */
 }
+
+/* Styling for the IP address text */
+.ip {
+    cursor: pointer; /* Changes the cursor to a hand when hovering over the IP */
+    color: lightblue; /* Optional: Change the IP text color */
+    position: relative; /* To position the tooltip bubble correctly */
+}
+
+/* Tooltip bubble styling */
+.tooltip {
+    visibility: hidden;
+    background-color: pink;
+    color: black;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the IP */
+    left: 50%;
+    margin-left: -50px; /* Centers the bubble */
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+}
+
+/* Show the tooltip when hovering over the IP */
+.ip:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
