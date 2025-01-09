@@ -53,9 +53,9 @@ body {
     padding: 5px;
     position: absolute;
     z-index: 1;
-    bottom: 110%; /* Position the tooltip above the IP */
+    bottom: 125%; /* Position above the IP */
     left: 50%;
-    margin-left: -50px; /* Centers the tooltip */
+    margin-left: -50px; /* Centers the tooltip horizontally */
     opacity: 0;
     transition: opacity 0.3s;
     font-size: 14px;
