@@ -9,7 +9,7 @@ body {
     height: 100vh; /* Full screen height */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Adjust text position further down */
 }
 
 /* Title at the top */
@@ -22,7 +22,7 @@ body {
 
 /* Container styling */
 .container {
-    margin-top: 20px;
+    margin-top: 30%; /* Move content further down */
     font-size: 20px;
 }
 
@@ -67,7 +67,15 @@ body {
     opacity: 1;
 }
 
-/* Adjust position of content for 1920x1080 screens */
-.container {
-    margin-top: 20%;
+/* Image container styling */
+.image-container {
+    margin-top: 20px; /* Space for the image */
+}
+
+/* Image styling */
+.nate-image {
+    width: 150px; /* Adjust the image size as necessary */
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Center the image horizontally */
 }
