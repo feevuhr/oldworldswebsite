@@ -6,11 +6,23 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Title at the top */
+.title {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 /* Container styling */
 .container {
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: 20px;
 }
 
@@ -34,16 +46,16 @@ body {
 /* Tooltip bubble styling */
 .tooltip {
     visibility: hidden;
-    background-color: pink;
-    color: black;
+    background-color: white; /* White background for the tooltip */
+    color: black; /* Black text */
     text-align: center;
     border-radius: 5px;
     padding: 5px;
     position: absolute;
     z-index: 1;
-    bottom: 125%; /* Position above the IP */
+    bottom: 110%; /* Position the tooltip above the IP */
     left: 50%;
-    margin-left: -50px; /* Centers the bubble */
+    margin-left: -50px; /* Centers the tooltip */
     opacity: 0;
     transition: opacity 0.3s;
     font-size: 14px;
@@ -53,4 +65,9 @@ body {
 .ip:hover .tooltip {
     visibility: visible;
     opacity: 1;
+}
+
+/* Adjust position of content for 1920x1080 screens */
+.container {
+    margin-top: 20%;
 }
