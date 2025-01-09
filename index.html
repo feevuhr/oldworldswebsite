@@ -8,11 +8,35 @@
 </head>
 <body>
     <div class="container">
-        <p><span class="date">May 9, 2020</span> (<span class="version">1.15.2</span>) → sigma.gooningat.work:25567</p>
-        <p><span class="date">June 24, 2020</span> (<span class="version">1.16.5</span>) → sigma.gooningat.work:25568</p>
-        <p><span class="date">June 24, 2020</span> (<span class="version">1.16.5</span>) → sigma.gooningat.work:25569</p>
-        <p><span class="date">June 24, 2020</span> (<span class="version">1.16.5</span>) → sigma.gooningat.work:25570</p>
-        <p><span class="date">June 24, 2020</span> (<span class="version">1.16.5</span>) → sigma.gooningat.work:25571</p>
+        <p><span class="date">May 9, 2020</span> (<span class="version">1.15.2</span>) → <span class="ip" data-ip="sigma.gooningat.work:25567">sigma.gooningat.work:25567</span><span class="tooltip">Copy to clipboard!</span></p>
+        <p><span class="date">June 24, 2020</span> (<span class="version">1.16.5</span>) → <span class="ip" data-ip="sigma.gooningat.work:25568">sigma.gooningat.work:25568</span><span class="tooltip">Copy to clipboard!</span></p>
+        <p><span class="date">June 24, 2020</span> (<span class="version">1.16.5</span>) → <span class="ip" data-ip="sigma.gooningat.work:25569">sigma.gooningat.work:25569</span><span class="tooltip">Copy to clipboard!</span></p>
+        <p><span class="date">June 24, 2020</span> (<span class="version">1.16.5</span>) → <span class="ip" data-ip="sigma.gooningat.work:25570">sigma.gooningat.work:25570</span><span class="tooltip">Copy to clipboard!</span></p>
+        <p><span class="date">June 24, 2020</span> (<span class="version">1.16.5</span>) → <span class="ip" data-ip="sigma.gooningat.work:25571">sigma.gooningat.work:25571</span><span class="tooltip">Copy to clipboard!</span></p>
     </div>
+
+    <script>
+        // Add click event listener to all IP elements
+        document.querySelectorAll('.ip').forEach(ipElement => {
+            ipElement.addEventListener('click', () => {
+                // Copy the IP stored in the data-ip attribute
+                const ipText = ipElement.getAttribute('data-ip');
+                navigator.clipboard.writeText(ipText)
+                    .then(() => {
+                        // Change the tooltip text to 'Copied!'
+                        const tooltip = ipElement.querySelector('.tooltip');
+                        tooltip.textContent = 'Copied!'; // Change text to 'Copied!'
+                        
+                        // Optionally, change it back to the original text after 2 seconds
+                        setTimeout(() => {
+                            tooltip.textContent = 'Copy to clipboard!';
+                        }, 2000);
+                    })
+                    .catch(err => {
+                        console.error('Failed to copy text: ', err);
+                    });
+            });
+        });
+    </script>
 </body>
 </html>
